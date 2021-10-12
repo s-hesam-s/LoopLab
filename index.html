@@ -20,8 +20,11 @@
     <title>Bootstrap Theme</title>
   </head>
 
-  <body>
-    <nav class="navbar navbar-expand-sm fixed-top navbar-dark bg-dark mb-3">
+  <body data-bs-spy="scroll" data-bs-target="#main-nav" id="home">
+    <nav
+      class="navbar navbar-expand-sm fixed-top navbar-dark bg-dark mb-3"
+      id="main-nav"
+    >
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html">LoopLAB</a>
         <button
@@ -142,7 +145,7 @@
                       <input
                         type="submit"
                         value="Submit"
-                        class="btn btn-outline-light btn-block"
+                        class="btn btn-outline-light"
                       />
                     </div>
                   </form>
@@ -328,6 +331,62 @@
       </div>
     </section>
 
+    <!-- FOOTER -->
+    <footer id="main-footer" class="bg-dark">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center py-4">
+            <h3>LoopLab</h3>
+            <p>Copyright &copy; <span id="year"></span></p>
+            <button
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#contactModal"
+            >
+              Contact Us
+            </button>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- CONTACT MODAL-->
+    <div class="modal fade" id="contactModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Contact Us</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="name" class="form-label text-black">Name</label>
+                <input type="text" class="form-control" />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label text-black">Email</label>
+                <input type="email" class="form-control" />
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label text-black"
+                  >Message</label
+                >
+                <textarea type="text" class="form-control"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
@@ -342,6 +401,9 @@
     <script>
       // Get the current year for the copyright
       $("#year").text(new Date().getFullYear());
+
+      // Init Scrollspy
+      $("body").scrollspy({ target: "#main-nav" });
     </script>
   </body>
 </html>
