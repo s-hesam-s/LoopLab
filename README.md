@@ -2,6 +2,14 @@
 
 An educational Bootstrap landing-page exercise with a social-product presentation and responsive navigation.
 
+## Captured preview
+
+<picture><source media="(prefers-reduced-motion: reduce)" srcset="docs/screenshots/portfolio-poster.png" /><source type="image/webp" srcset="docs/screenshots/portfolio.webp" /><img src="docs/screenshots/portfolio.gif" width="100%" alt="LoopLab — actual captured UI states" /></picture>
+
+Landing page and anchor navigation to Explore. Forms are static UI examples; no account or message is submitted.
+
+[Reproduce this capture and view the static image](docs/PORTFOLIO-PREVIEW.md) · [Mobile capture](docs/screenshots/portfolio-mobile.png)
+
 ## Included UI
 
 - Hero/sign-up layout and Explore, Create and Share sections.
